@@ -8,9 +8,10 @@ Note: if there is nothing to sum, the sum is default to 0.
 */
 function positiveSum(arr) {
   let acc = 0;
-  for (let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] > 0) {
       acc += arr[i];
-    } 
-  } return acc;
+    }
+  }
+  return acc;
 }
