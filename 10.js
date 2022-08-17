@@ -8,3 +8,8 @@ function removeChar(str) {
   newArray.pop();
   return newArray.join("");
 }
+
+//Solution
+function removeChar(str) {
+    return str.slice(1, -1);
+}
