@@ -19,7 +19,7 @@ function findAverage(array) {
     return acc/step;
 }
 
-findAverage([1,2,3])
+console.log(findAverage([1,2,3]))
 
 /*----------BEST PRACTICE-----------*/
 //№1
@@ -27,7 +27,7 @@ const find_average = (array) => {
     return array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
 }
 //№2
-function find_average(array) {
+function find_average1(array) {
     if (array.length === 0) {
         return 0;
     }
@@ -37,3 +37,6 @@ function find_average(array) {
     }
     return result/array.length;
 }
+
+console.log(find_average([1,2,3]))
+console.log(find_average1([1,2,3]))
