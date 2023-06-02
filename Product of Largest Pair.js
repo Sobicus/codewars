@@ -35,7 +35,7 @@ function maxProduct1(a) {
     return biggest * Math.max.apply(Math, a);
 }
 
-console.log(maxProduct1([1,5,8,7,2]))
+console.log(maxProduct1([1,5,8,8,2]))
 
 //2
 function maxProduct2(a) {
@@ -60,4 +60,4 @@ function maxProduct2(a) {
     return max * preMax;
 }
 
-console.log(maxProduct2([1,5,8,7,2]))
+console.log(maxProduct2([1,5,8,2]))
