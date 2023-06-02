@@ -27,3 +27,37 @@ function maxProduct(a) {
 }
 
 console.log(maxProduct([10, 2, 30, 4, 5]))
+/*----------BEST PRACTICE-----------*/
+//1
+function maxProduct1(a) {
+    var biggest = Math.max.apply(Math, a);
+    a.splice(a.indexOf(biggest), 1);
+    return biggest * Math.max.apply(Math, a);
+}
+
+console.log(maxProduct1([1,5,8,7,2]))
+
+//2
+function maxProduct2(a) {
+    var max = a[0];
+    var preMax = a[0];
+    for(var i=1;i<a.length;i++)
+    {
+        if(a[i] > max)
+        {
+            preMax = max;
+            max = a[i];
+        }
+        else
+        {
+            if(a[i] > preMax)
+            {
+                preMax = a[i];
+            }
+        }
+    }
+
+    return max * preMax;
+}
+
+console.log(maxProduct2([1,5,8,7,2]))
