@@ -18,3 +18,4 @@ function joinStrings(string1, string2){
 }
 
 console.log(joinStrings('first','second'))
+
