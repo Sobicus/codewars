@@ -18,10 +18,31 @@ function betterThanAverage(classPoints, yourPoints) {
     let acc = 0
     let runs = 0
     let sumArr = classPoints.map(el=>{
-        console.log(runs=runs + 1)
+        runs = runs+1
         acc+=el
     })
     return acc/runs<yourPoints
 }
 console.log(betterThanAverage([1,2,3,4,5], 2))
+console.log(betterThanAverage([1,2,3,4,5], 4))
 
+/*little refactor myu code*/
+function betterThanAverageRef(classPoints, yourPoints) {
+    let acc = 0
+    let sumArr = classPoints.map(el=>{
+        acc+=el
+    })
+    return acc/classPoints.length<yourPoints
+}
+console.log(betterThanAverageRef([1,2,3,4,5], 2))
+console.log(betterThanAverageRef([1,2,3,4,5], 4))
+/*
+The best practices
+ */
+
+function betterThanAverage1(classPoints, yourPoints) {
+    return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length;
+}
+
+console.log(betterThanAverage1([1,2,3,4,5,6], 2))
+console.log(betterThanAverage1([1,2,3,4,5,6], 4))
